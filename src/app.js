@@ -17,7 +17,7 @@ app.use('/users', userRouter); // Importa as rotas que criamos no arquivo src/ro
 /* ---------- Criar conexão com o banco ---------- */
 
   mongoose.connect(process.env.MONGODB_URI, { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(() => console.log('Connected to MongoDB Atlas'))
+    .then(() => console.log('Conectado no MongoDB Atlas'))
     .catch(err => {
         console.error('Could not connect to MongoDB Atlas', err);
         process.exit(1); // Encerra o processo caso a conexão falhe
@@ -27,5 +27,5 @@ app.use('/users', userRouter); // Importa as rotas que criamos no arquivo src/ro
 /* ---------- Sobe nosso servidor de aplicação ---------- */
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  console.log(`Servidor conectado na porta ${port}`);
 });
